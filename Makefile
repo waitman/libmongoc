@@ -41,7 +41,6 @@ install:
 	$(INSTALL) -m 644 ./mongoc/mongoc-write-concern-private.h $(PREFIX)/include/mongoc/
 	$(INSTALL) -m 644 ./mongoc/mongoc-write-concern.h $(PREFIX)/include/mongoc/
 	$(INSTALL) -m 644 ./mongoc/mongoc.h $(PREFIX)/include/mongoc/
-	$(INSTALL) -m 644 ./mongoc/op-header.def $(PREFIX)/include/mongoc/
 	$(INSTALL) -m 644 ./mongoc/mongoc-stdint.h $(PREFIX)/include/mongoc/
 	$(INSTALL) -m 644 libmongoc.a $(PREFIX)/lib/
 	$(INSTALL) -m 644 libmongoc.so $(PREFIX)/lib/
