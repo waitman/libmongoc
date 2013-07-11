@@ -19,7 +19,7 @@
 #define MONGOC_COLLECTION_H
 
 
-#include <bson.h>
+#include <bson/bson.h>
 
 #include "mongoc-flags.h"
 #include "mongoc-cursor.h"

@@ -19,7 +19,7 @@
 #define MONGOC_QUEUE_PRIVATE_H
 
 
-#include <bson.h>
+#include <bson/bson.h>
 
 #include "mongoc-list-private.h"
 

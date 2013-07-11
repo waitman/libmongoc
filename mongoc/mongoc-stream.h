@@ -19,7 +19,7 @@
 #define MONGOC_STREAM_H
 
 
-#include <bson.h>
+#include <bson/bson.h>
 #include <sys/uio.h>
 
 

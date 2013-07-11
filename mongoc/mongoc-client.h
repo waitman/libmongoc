@@ -19,7 +19,7 @@
 #define MONGOC_CLIENT_H
 
 
-#include <bson.h>
+#include <bson/bson.h>
 
 #include "mongoc-collection.h"
 #include "mongoc-database.h"

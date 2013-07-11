@@ -19,7 +19,7 @@
 #define MONGOC_URI_H
 
 
-#include <bson.h>
+#include <bson/bson.h>
 
 #include "mongoc-host-list.h"
 

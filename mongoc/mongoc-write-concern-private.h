@@ -19,7 +19,7 @@
 #define MONGOC_WRITE_CONCERN_PRIVATE_H
 
 
-#include <bson.h>
+#include <bson/bson.h>
 
 
 BSON_BEGIN_DECLS

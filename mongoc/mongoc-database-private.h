@@ -19,7 +19,7 @@
 #define MONGOC_DATABASE_PRIVATE_H
 
 
-#include <bson.h>
+#include <bson/bson.h>
 
 #include "mongoc-client.h"
 #include "mongoc-read-prefs.h"

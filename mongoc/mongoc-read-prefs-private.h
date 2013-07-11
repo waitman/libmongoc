@@ -19,7 +19,7 @@
 #define MONGOC_READ_PREFS_PRIVATE_H
 
 
-#include <bson.h>
+#include <bson/bson.h>
 
 #include "mongoc-cluster-private.h"
 #include "mongoc-read-prefs.h"

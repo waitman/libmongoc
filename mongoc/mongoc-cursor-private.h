@@ -19,7 +19,7 @@
 #define MONGOC_CURSOR_PRIVATE_H
 
 
-#include <bson.h>
+#include <bson/bson.h>
 
 #include "mongoc-client.h"
 #include "mongoc-buffer-private.h"

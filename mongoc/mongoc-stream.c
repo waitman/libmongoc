@@ -233,7 +233,7 @@ mongoc_stream_unix_readv (mongoc_stream_t *stream,
 
       /*
        * Block on poll() until data is available or timeout. Upont timeout,
-       * synthesize an errno of ETIME.
+       * synthesize an errno of ETIMEDOUT.
        */
       errno = 0;
       fds.revents = 0;
@@ -241,7 +241,7 @@ mongoc_stream_unix_readv (mongoc_stream_t *stream,
       if (written == -1) {
          return -1;
       } else if (written == 0) {
-         errno = ETIME;
+         errno = ETIMEDOUT;
          return -1;
       }
 
@@ -368,7 +368,7 @@ mongoc_stream_unix_writev (mongoc_stream_t *stream,
 
       /*
        * Block on poll() until data is available or timeout. Upont timeout,
-       * synthesize an errno of ETIME.
+       * synthesize an errno of ETIMEDOUT.
        */
       errno = 0;
       fds.revents = 0;
@@ -376,7 +376,7 @@ mongoc_stream_unix_writev (mongoc_stream_t *stream,
       if (written == -1) {
          return -1;
       } else if (written == 0) {
-         errno = ETIME;
+         errno = ETIMEDOUT;
          return -1;
       }
 

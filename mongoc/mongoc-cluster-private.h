@@ -19,7 +19,7 @@
 #define MONGOC_CLUSTER_PRIVATE_H
 
 
-#include <bson.h>
+#include <bson/bson.h>
 
 #include "mongoc-array-private.h"
 #include "mongoc-buffer-private.h"

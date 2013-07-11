@@ -19,7 +19,7 @@
 #define MONGOC_DATABASE_H
 
 
-#include <bson.h>
+#include <bson/bson.h>
 
 #include "mongoc-cursor.h"
 #include "mongoc-flags.h"

@@ -19,7 +19,7 @@
 #define MONGOC_H
 
 
-#include <bson.h>
+#include <bson/bson.h>
 
 #define MONGOC_INSIDE
 #include "mongoc-client.h"
