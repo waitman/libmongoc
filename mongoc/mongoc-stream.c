@@ -18,6 +18,7 @@
 #define _GNU_SOURCE
 #include <errno.h>
 #include <fcntl.h>
+#include <limits.h>
 #include <netinet/in.h>
 #include <netinet/tcp.h>
 #include <poll.h>
@@ -158,6 +159,7 @@ mongoc_stream_unix_readv (mongoc_stream_t *stream,
    bson_return_val_if_fail(stream, -1);
    bson_return_val_if_fail(iov, -1);
    bson_return_val_if_fail(iovcnt, -1);
+   bson_return_val_if_fail(timeout_msec <= INT_MAX, -1);
 
    /*
     * NOTE: Thar' be dragons.
@@ -268,8 +270,6 @@ mongoc_stream_unix_readv (mongoc_stream_t *stream,
          ret += written;
       }
 
-      BSON_ASSERT(cur < iovcnt);
-
       /*
        * Increment iovec's in the case we got a short read. Break out if
        * we have read all our expected data.
@@ -282,6 +282,7 @@ mongoc_stream_unix_readv (mongoc_stream_t *stream,
       if (cur == iovcnt) {
          break;
       }
+      BSON_ASSERT(cur < iovcnt);
       iov[cur].iov_base = ((bson_uint8_t *)iov[cur].iov_base) + written;
       iov[cur].iov_len -= written;
 
