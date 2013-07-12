@@ -42,6 +42,15 @@ install:
 	$(INSTALL) -m 644 ./mongoc/mongoc-write-concern.h $(PREFIX)/include/mongoc/
 	$(INSTALL) -m 644 ./mongoc/mongoc.h $(PREFIX)/include/mongoc/
 	$(INSTALL) -m 644 ./mongoc/mongoc-stdint.h $(PREFIX)/include/mongoc/
+	$(INSTALL) -m 644 ./mongoc/op-delete.def $(PREFIX)/include/mongoc/ 
+	$(INSTALL) -m 644 ./mongoc/op-get-more.def $(PREFIX)/include/mongoc/ 
+	$(INSTALL) -m 644 ./mongoc/op-header.def $(PREFIX)/include/mongoc/ 
+	$(INSTALL) -m 644 ./mongoc/op-insert.def $(PREFIX)/include/mongoc/ 
+	$(INSTALL) -m 644 ./mongoc/op-kill-cursors.def $(PREFIX)/include/mongoc/ 
+	$(INSTALL) -m 644 ./mongoc/op-msg.def $(PREFIX)/include/mongoc/ 
+	$(INSTALL) -m 644 ./mongoc/op-query.def $(PREFIX)/include/mongoc/ 
+	$(INSTALL) -m 644 ./mongoc/op-reply.def $(PREFIX)/include/mongoc/ 
+	$(INSTALL) -m 644 ./mongoc/op-update.def $(PREFIX)/include/mongoc/ 
 	$(INSTALL) -m 644 libmongoc.a $(PREFIX)/lib/
 	$(INSTALL) -m 644 libmongoc.so $(PREFIX)/lib/
 
